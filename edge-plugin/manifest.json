@@ -1,0 +1,25 @@
+{
+    "name": "usc-netconn",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "自动连接usc网络",
+    "action": {
+        "default_popup": "setting.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "http://210.43.112.9/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://210.43.112.9/*"
+            ],
+            "js": [
+                "login.js"
+            ]
+        }
+    ]
+}

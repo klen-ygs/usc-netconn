@@ -1,0 +1,32 @@
+body {
+    width: 230px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textInput {
+    width: 190px;
+    height: 30px;
+}
+
+#saveBtn {
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: rgb(56, 142, 217);
+    border: 0;
+    border-radius: 4px;
+}
+
+#saveBtn:hover {
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: rgb(27, 79, 125);
+    border: 0;
+    border-radius: 4px;
+}
