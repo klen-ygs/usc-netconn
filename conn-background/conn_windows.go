@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"github.com/go-toast/toast"
 	"os/exec"
 	"syscall"
 	"time"
@@ -26,4 +27,12 @@ func ConnUsc() error {
 	defer cancel()
 	cmd := exec.CommandContext(ctx, "cmd", "/c", "start", "http://210.43.112.9/srun_portal_pc?ac_id=5&theme=basic")
 	return cmd.Run()
+}
+
+func CreateNotify(msg string) {
+	notify := toast.Notification{
+		AppID:   "USCConn",
+		Message: msg,
+	}
+	notify.Push()
 }
