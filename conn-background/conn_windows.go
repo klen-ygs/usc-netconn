@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"os"
 	"os/exec"
 	"syscall"
 	"time"
@@ -25,7 +24,6 @@ func init() {
 func ConnUsc() error {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*2)
 	defer cancel()
-	cmd := exec.CommandContext(ctx, "cmd", "start", "http://210.43.112.9/srun_portal_pc?ac_id=5&theme=basic")
-	cmd.Stdout = os.Stdout
+	cmd := exec.CommandContext(ctx, "cmd", "/c", "start", "http://210.43.112.9/srun_portal_pc?ac_id=5&theme=basic")
 	return cmd.Run()
 }

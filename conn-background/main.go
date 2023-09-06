@@ -12,7 +12,7 @@ func main() {
 	var data = make([]byte, 1024)
 
 	for i := 0; i < 70; i++ {
-		time.Sleep(time.Second * 5)
+		time.Sleep(time.Second * 3)
 		resp, err := http.Get("http://bilibili.com")
 		if err != nil {
 			slog.Warn("网络连接断开", "err", err)
@@ -25,6 +25,7 @@ func main() {
 		}
 		if bytes.Contains(data, []byte("深澜软件")) {
 			ConnUsc()
+			return
 		}
 
 	}
