@@ -13,4 +13,10 @@ function save() {
 let btn = document.getElementById('saveBtn')
 btn.addEventListener('click', () => {
     save()
+    chrome.notifications.create('', {
+        type: 'basic',
+        message:'usc账户已保存',
+        title:'Usc-Conn',
+        iconUrl:'Wi-Fi.svg'
+    })
 })
