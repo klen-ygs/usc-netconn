@@ -1,4 +1,4 @@
-module conn-background
+module conn-setup
 
 go 1.21.0
 
